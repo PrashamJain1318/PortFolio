@@ -502,7 +502,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                     }
                 );
-                );
             }
 
             // Footer Animation (applies to all sections since footer is global, but we can animate it when visible)
