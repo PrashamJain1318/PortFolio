@@ -255,6 +255,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 gsap.to(card, {
                     rotationX: rotateX,
                     rotationY: rotateY,
+                    x: (x - centerX) * 0.05,
+                    y: (y - centerY) * 0.05,
+                    scale: 1.02,
                     transformPerspective: 1000,
                     ease: 'power2.out',
                     duration: 0.4
@@ -277,6 +280,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 gsap.to(card, {
                     rotationX: 0,
                     rotationY: 0,
+                    x: 0,
+                    y: 0,
+                    scale: 1,
                     ease: 'power2.out',
                     duration: 0.7
                 });
@@ -297,7 +303,15 @@ document.addEventListener('DOMContentLoaded', () => {
             card.addEventListener('mouseenter', () => {
                 const projectName = card.getAttribute('data-project');
                 if (projectName && projectCursor) {
-                    projectCursor.innerHTML = '<img src="https://port-folio-mu-five-64.vercel.app/Hexagon.png" alt="logo" class="cursor-icon"> ' + projectName;
+                    projectCursor.innerHTML = `
+                        <div style="display: flex; align-items: center; gap: 0.6rem;">
+                            <img src="https://port-folio-mu-five-64.vercel.app/Hexagon.png" alt="logo" class="cursor-icon">
+                            <div style="display: flex; flex-direction: column;">
+                                <span>${projectName}</span>
+                                <span style="font-size: 0.65rem; color: #a1a1aa; font-weight: 400; margin-top: 2px;">View Project &rarr;</span>
+                            </div>
+                        </div>
+                    `;
                     projectCursor.classList.add('active');
                 }
             });
@@ -308,10 +322,32 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Tooltip follows mouse globally, but only visible on hover (handled by active class)
         if (projectCursor) {
-            document.addEventListener('mousemove', (e) => {
-                projectCursor.style.left = e.clientX + 'px';
-                projectCursor.style.top = e.clientY + 'px';
-            });
+            const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+            
+            if (!isTouchDevice) {
+                document.addEventListener('mousemove', (e) => {
+                    // Get viewport boundaries to prevent overflow
+                    let x = e.clientX;
+                    let y = e.clientY;
+                    
+                    const cursorRect = projectCursor.getBoundingClientRect();
+                    const halfWidth = (cursorRect.width || 200) / 2;
+                    
+                    if (x + halfWidth > window.innerWidth - 10) x = window.innerWidth - halfWidth - 10;
+                    if (x - halfWidth < 10) x = halfWidth + 10;
+                    if (y < 80) y = 80; // prevent going too high above the cursor
+                    
+                    gsap.to(projectCursor, {
+                        left: x,
+                        top: y,
+                        duration: 0.4,
+                        ease: "power3.out"
+                    });
+                });
+            } else {
+                // Disable custom cursor on touch devices
+                projectCursor.style.display = 'none';
+            }
         }
     }
 
