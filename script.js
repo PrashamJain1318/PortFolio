@@ -378,36 +378,73 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // === GSAP Animations ===
     // === LEETCODE DASHBOARD LOGIC ===
+    const LC_CONFIG = {
+        USERNAME: "Prasham_Jain1318",
+        REFRESH_INTERVAL: 30 * 60 * 1000 // 30 minutes
+    };
+
     let leetCodeInitialized = false;
-    async function initLeetCodeDashboard() {
-        if (leetCodeInitialized) return;
+    let lcRefreshInterval = null;
+
+    async function initLeetCodeDashboard(forceRefresh = false) {
+        if (leetCodeInitialized && !forceRefresh) return;
         
         const loadingEl = document.getElementById('lc-loading');
         const errorEl = document.getElementById('lc-error');
         const contentEl = document.getElementById('lc-content');
+        const refreshBtn = document.getElementById('lc-refresh-btn');
+        const lastUpdatedEl = document.getElementById('lc-last-updated');
+        
         if (!loadingEl || !errorEl || !contentEl) return;
 
+        if (refreshBtn && !refreshBtn.hasAttribute('data-initialized')) {
+            refreshBtn.setAttribute('data-initialized', 'true');
+            refreshBtn.addEventListener('click', () => {
+                initLeetCodeDashboard(true);
+            });
+            // Setup auto refresh interval
+            if (!lcRefreshInterval) {
+                lcRefreshInterval = setInterval(() => initLeetCodeDashboard(true), LC_CONFIG.REFRESH_INTERVAL);
+            }
+        }
+
         leetCodeInitialized = true;
+
+        if (forceRefresh) {
+            loadingEl.style.display = 'block';
+            contentEl.style.display = 'none';
+            errorEl.style.display = 'none';
+            if (refreshBtn) refreshBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Syncing...';
+        }
 
         try {
             const cacheKey = 'leetcode_stats_cache';
             const cacheTimeKey = 'leetcode_stats_time';
-            const cacheExpiry = 60 * 60 * 1000; // 1 hour
             
             let data = null;
+            let updateTime = null;
             const now = Date.now();
             const cachedTime = localStorage.getItem(cacheTimeKey);
             const cachedData = localStorage.getItem(cacheKey);
 
-            if (cachedData && cachedTime && (now - parseInt(cachedTime)) < cacheExpiry) {
+            if (!forceRefresh && cachedData && cachedTime && (now - parseInt(cachedTime)) < LC_CONFIG.REFRESH_INTERVAL) {
                 data = JSON.parse(cachedData);
+                updateTime = new Date(parseInt(cachedTime));
             } else {
-                const response = await fetch('https://leetcode-api-faisalshohag.vercel.app/Prasham_Jain1318');
+                const response = await fetch(`https://leetcode-api-faisalshohag.vercel.app/${LC_CONFIG.USERNAME}`);
                 if (!response.ok) throw new Error('API Error');
                 data = await response.json();
+                updateTime = new Date();
                 localStorage.setItem(cacheKey, JSON.stringify(data));
-                localStorage.setItem(cacheTimeKey, now.toString());
+                localStorage.setItem(cacheTimeKey, updateTime.getTime().toString());
             }
+
+            // Update Last Updated Text
+            if (lastUpdatedEl) {
+                const minsAgo = Math.floor((new Date() - updateTime) / 60000);
+                lastUpdatedEl.innerHTML = `<i class="far fa-clock"></i> ${minsAgo === 0 ? 'Updated just now' : `Updated ${minsAgo} min${minsAgo === 1 ? '' : 's'} ago`}`;
+            }
+            if (refreshBtn) refreshBtn.innerHTML = '<i class="fas fa-sync-alt"></i> Sync';
 
             // Populate Stats
             document.getElementById('lc-total-solved').innerText = data.totalSolved;
@@ -536,10 +573,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     { opacity: 1, y: 0, duration: 0.5, stagger: 0.1, scrollTrigger: { trigger: '#leetcode-dashboard', start: 'top 80%' }}
                 );
             }
-        } catch (err) {
-            console.error('LeetCode API Error:', err);
+        } catch (error) {
+            console.error('Failed to load LeetCode data:', error);
             loadingEl.style.display = 'none';
             errorEl.style.display = 'block';
+            contentEl.style.display = 'none';
+            const refreshBtn = document.getElementById('lc-refresh-btn');
+            if (refreshBtn) refreshBtn.innerHTML = '<i class="fas fa-sync-alt"></i> Sync Failed';
         }
     }
 
