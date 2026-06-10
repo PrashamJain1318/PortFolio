@@ -10,6 +10,14 @@
 </head>
 <body class="bg-zinc-950 text-zinc-100">
 
+    <!-- PAGE LOADER -->
+    <div id="page-loader" class="page-loader">
+        <div class="loader-content">
+            <div class="loader-hexagon"></div>
+            <div class="loader-text">Initializing<span class="dot-1">.</span><span class="dot-2">.</span><span class="dot-3">.</span></div>
+        </div>
+    </div>
+
     <div class="cursor-glow" id="cursorGlow"></div>
     <div class="bg-blobs">
         <div class="blob blob-1"></div>
@@ -96,20 +104,33 @@
                 
                 <!-- SECTION: HOME -->
                 <section id="home" class="page-section active">
-                    <h1 class="hero-title">
-                        Hey, I'm <span class="highlight-name">Prasham</span>
-                    </h1>
-                    
-                    <h2 class="hero-subtitle">
-                        AIML Engineering 
-                        <span class="highlight-box">
-                            <span class="highlight-text">student</span>
-                            <span class="corner top-left"></span>
-                            <span class="corner top-right"></span>
-                            <span class="corner bottom-left"></span>
-                            <span class="corner bottom-right"></span>
-                        </span>
-                    </h2>
+                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 3rem; flex-wrap: wrap-reverse; margin-bottom: 2rem;">
+                        <div style="flex: 1; min-width: 300px;">
+                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                                <h1 class="hero-title" style="margin: 0;">
+                                    Hey, I'm <span class="highlight-name">Prasham</span>
+                                </h1>
+                                <div class="learning-badge" style="background: rgba(16, 185, 129, 0.1); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.2); padding: 0.4rem 1rem; border-radius: 9999px; font-size: 0.85rem; font-weight: 600; display: flex; align-items: center; gap: 0.5rem; backdrop-filter: blur(4px);">
+                                    <span style="display: block; width: 6px; height: 6px; background: #10b981; border-radius: 50%; box-shadow: 0 0 10px #10b981; animation: dotPulse 1.5s infinite;"></span>
+                                    Currently Learning Generative AI
+                                </div>
+                            </div>
+                            
+                            <h2 class="hero-subtitle" style="font-size: clamp(1.8rem, 4vw, 2.5rem); max-width: 800px; line-height: 1.3; margin-bottom: 1.5rem;">
+                                Building AI-powered products, contributing to open source, and solving real-world problems through code.
+                            </h2>
+                            
+                            <p class="hero-description" style="font-size: 1.25rem; margin-bottom: 0;">
+                                <span style="color: var(--zinc-400);">I am a </span><span id="typewriter" style="color: #3b82f6; font-weight: 600;"></span><span class="type-cursor" style="color: #3b82f6; animation: blink 1s step-end infinite;">|</span>
+                            </p>
+                        </div>
+                        
+                        <div class="hero-profile-container" style="display: flex; justify-content: center; align-items: center;">
+                            <div class="hero-profile-image" style="width: 250px; height: 250px; border-radius: 50%; overflow: hidden; border: 4px solid rgba(59, 130, 246, 0.3); box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2); animation: floatImage 6s ease-in-out infinite;">
+                                <img src="https://github.com/PrashamJain1318.png" alt="Prasham Jain" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                    </div>
                     
                     <div class="connect-banner">
                         <div class="banner-content">
@@ -118,10 +139,6 @@
                         </div>
                         <a href="https://linkedin.com/in/prasham-jain-/" target="_blank" class="follow-btn">Connect</a>
                     </div>
-                    
-                    <p class="hero-description">
-                        I love transforming ideas into scalable products. As a CSE (AI & ML) student, I am actively exploring software development, AI, open source, and entrepreneurship. My mission is to build innovative solutions, contribute to global developer communities, and launch technology ventures that solve real-world problems.
-                    </p>
 
                     <article class="featured-work">
                         <div class="video-container">
@@ -234,128 +251,95 @@
                 <section id="experience" class="page-section">
                     
                     <div class="changelog-header">
-                        <div class="changelog-badge">Career Timeline</div>
-                        <h1 class="changelog-title">Changelog from my journey</h1>
-                        <p class="changelog-subtitle">I've been working at Kay.ai for the past 1.5 years.<br>Here's a timeline of my journey across multiple startups and projects.</p>
+                        <div class="changelog-badge">Tech Journey</div>
+                        <h1 class="changelog-title">My path so far</h1>
+                        <p class="changelog-subtitle">I am actively building projects, contributing to open source, and preparing for GSoC.<br>Here's a timeline of my journey.</p>
                         
                         <div class="changelog-legend">
-                            <span class="legend-item"><span class="legend-dot" style="background: #3b82f6;"></span> Current Role</span>
-                            <span class="legend-item"><span class="legend-dot" style="background: #a855f7;"></span> AI Startup</span>
-                            <span class="legend-item"><span class="legend-dot" style="background: #22c55e;"></span> Growth Startup</span>
-                            <span class="legend-item"><span class="legend-dot" style="background: #f59e0b;"></span> Early Career</span>
+                            <span class="legend-item"><span class="legend-dot" style="background: #a855f7;"></span> Future</span>
+                            <span class="legend-item"><span class="legend-dot" style="background: #3b82f6;"></span> Current</span>
+                            <span class="legend-item"><span class="legend-dot" style="background: #22c55e;"></span> Past</span>
+                            <span class="legend-item"><span class="legend-dot" style="background: #3b82f6;"></span> 2026</span>
+                            <span class="legend-item"><span class="legend-dot" style="background: #22c55e;"></span> 2025</span>
                         </div>
                     </div>
 
-
-
-                    <h1 class="page-title" style="display: none;">Experience</h1> <!-- Hidden since design doesn't show huge title -->
+                    <h1 class="page-title" style="display: none;">Experience</h1>
                     <div class="timeline-container">
-                        <!-- Item 1 -->
+                        <!-- Item 1: Future -->
                         <div class="timeline-item">
                             <div class="timeline-left">
                                 <div class="timeline-dot"></div>
-                                <h2 class="timeline-date">2026 – Pres</h2>
+                                <h2 class="timeline-date">Future</h2>
                             </div>
                             <div class="timeline-right">
                                 <div class="exp-header">
-                                    <div class="exp-icon" style="color: #3b82f6;"><i class="fas fa-rocket"></i></div>
+                                    <div class="exp-icon" style="color: #a855f7;"><i class="fas fa-rocket"></i></div>
                                     <div>
-                                        <h3 class="exp-title">Open Source Contributor &middot; Global</h3>
-                                        <h4 class="exp-subtitle">Building projects handling diverse challenges</h4>
-                                        <h4 class="exp-subtitle" style="font-size: 0.75rem; margin-top: 0.25rem;">Active Member &middot; Multiple Teams</h4>
+                                        <h3 class="exp-title">Startup Founder</h3>
+                                        <h4 class="exp-subtitle">Building innovative technology ventures</h4>
                                     </div>
                                 </div>
                                 <ul class="exp-bullets">
-                                    <li>Contributing to organizations such as Zulip and other open-source communities</li>
-                                    <li>Solving Data Structures & Algorithms problems daily</li>
-                                    <li>Building AI-powered web applications using modern technologies</li>
-                                    <li>Learning system design, backend engineering, and scalable software development</li>
+                                    <li>Transforming ideas into scalable AI products</li>
+                                    <li>Solving real-world problems through innovative technology</li>
                                 </ul>
                                 <div class="tech-stack">
-                                    <span>React</span><span>Node.js</span><span>MongoDB</span><span>AI/ML</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Item 2 -->
-                        <div class="timeline-item">
-                            <div class="timeline-left">
-                                <div class="timeline-dot"></div>
-                                <h2 class="timeline-date">2025 – 2026</h2>
-                            </div>
-                            <div class="timeline-right">
-                                <div class="exp-header">
-                                    <div class="exp-icon" style="color: #22c55e;"><i class="fas fa-code"></i></div>
-                                    <div>
-                                        <h3 class="exp-title">Hackathon Builder &middot; Full Stack</h3>
-                                        <h4 class="exp-subtitle">Developed platforms for innovation challenges</h4>
-                                        <h4 class="exp-subtitle" style="font-size: 0.75rem; margin-top: 0.25rem;">Project Lead &middot; 3 Team Members</h4>
-                                    </div>
-                                </div>
-                                <ul class="exp-bullets">
-                                    <li>Built full-stack web applications using the MERN stack</li>
-                                    <li>Participated in hackathons and startup-focused innovation challenges</li>
-                                    <li>Developed AI-powered solutions for social and business problems</li>
-                                    <li>Learned deployment, APIs, authentication, and database design</li>
-                                </ul>
-                                <div class="tech-stack">
-                                    <span>React</span><span>Express.js</span><span>MongoDB</span><span>Tailwind</span>
+                                    <span>Leadership</span><span>Product Building</span><span>AI/ML</span>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Item 3 -->
+                        <!-- Item 2: 2026 -->
                         <div class="timeline-item">
                             <div class="timeline-left">
                                 <div class="timeline-dot"></div>
-                                <h2 class="timeline-date">2024 – 2025</h2>
+                                <h2 class="timeline-date">2026</h2>
                             </div>
                             <div class="timeline-right">
                                 <div class="exp-header">
-                                    <div class="exp-icon" style="color: #3b82f6;"><i class="fas fa-graduation-cap"></i></div>
+                                    <div class="exp-icon" style="color: #3b82f6;"><i class="fas fa-code-branch"></i></div>
                                     <div>
-                                        <h3 class="exp-title">Competitive Exam Aspirant & Future Engineer</h3>
-                                        <h4 class="exp-subtitle">Balanced academics with technical learning.</h4>
+                                        <h3 class="exp-title">Open Source & GSoC Prep</h3>
+                                        <h4 class="exp-subtitle">Making impactful contributions</h4>
                                     </div>
                                 </div>
                                 <ul class="exp-bullets">
-                                    <li>Prepared for NEET and CUET while exploring programming</li>
-                                    <li>Developed strong analytical and problem-solving skills</li>
-                                    <li>Started learning Data Structures & Algorithms</li>
-                                    <li>Built foundational knowledge in Computer Science</li>
+                                    <li>Made first major contributions to open-source organizations</li>
+                                    <li>Intensively preparing for Google Summer of Code (GSoC)</li>
+                                    <li>Solving complex bugs and collaborating with global developer communities</li>
                                 </ul>
                                 <div class="tech-stack">
-                                    <span>Problem Solving</span><span>Mathematics</span><span>Logic Building</span>
+                                    <span>Git</span><span>Open Source</span><span>System Design</span>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Item 4 -->
+                        <!-- Item 3: 2025 -->
                         <div class="timeline-item">
                             <div class="timeline-left">
                                 <div class="timeline-dot"></div>
-                                <h2 class="timeline-date">2023 – 2024</h2>
+                                <h2 class="timeline-date">2025</h2>
                             </div>
                             <div class="timeline-right">
                                 <div class="exp-header">
-                                    <div class="exp-icon" style="color: #f59e0b;"><i class="fas fa-seedling"></i></div>
+                                    <div class="exp-icon" style="color: #22c55e;"><i class="fas fa-laptop-code"></i></div>
                                     <div>
-                                        <h3 class="exp-title">Beginner Programmer &middot; Fundamentals</h3>
-                                        <h4 class="exp-subtitle">Started the journey into software development</h4>
-                                        <h4 class="exp-subtitle" style="font-size: 0.75rem; margin-top: 0.25rem;">Early Stage &middot; Self-Taught</h4>
+                                        <h3 class="exp-title">The Foundation</h3>
+                                        <h4 class="exp-subtitle">Started B.Tech CSE (AI & ML)</h4>
                                     </div>
                                 </div>
                                 <ul class="exp-bullets">
-                                    <li>Learned programming fundamentals</li>
-                                    <li>Practiced coding challenges and algorithms</li>
-                                    <li>Explored web development and GitHub</li>
-                                    <li>Built first personal projects</li>
+                                    <li>Learned C++ and mastered core programming fundamentals</li>
+                                    <li>Dived deep into Data Structures & Algorithms (DSA)</li>
+                                    <li>Took the first steps into the Open Source ecosystem</li>
                                 </ul>
                                 <div class="tech-stack">
-                                    <span>C++</span><span>HTML/CSS</span><span>JavaScript</span>
+                                    <span>C++</span><span>DSA</span><span>Fundamentals</span>
                                 </div>
                             </div>
                         </div>
+                    </div> 
 
                         <!-- Key Achievements Item -->
                         <div class="timeline-item">
@@ -379,28 +363,36 @@
                                         <div style="color: #71717a; font-size: 0.75rem;">Across all platforms</div>
                                     </div>
                                     <div style="background: #18181b; border-radius: 0.75rem; padding: 1.5rem;">
-                                        <div style="color: #10b981; font-weight: 600; font-size: 0.875rem; margin-bottom: 0.25rem;">Hackathons</div>
-                                        <div class="stat-counter" data-target="5" data-suffix="+" style="font-size: 2rem; font-weight: 700; color: white; margin-bottom: 0.25rem;">0+</div>
-                                        <div style="color: #71717a; font-size: 0.75rem;">Competitions & Wins</div>
-                                    </div>
-                                    <div style="background: #18181b; border-radius: 0.75rem; padding: 1.5rem;">
                                         <div style="color: #10b981; font-weight: 600; font-size: 0.875rem; margin-bottom: 0.25rem;">Open Source</div>
                                         <div class="stat-counter" data-target="20" data-suffix="+" style="font-size: 2rem; font-weight: 700; color: white; margin-bottom: 0.25rem;">0+</div>
                                         <div style="color: #71717a; font-size: 0.75rem;">Contributions Merged</div>
                                     </div>
                                     <div style="background: #18181b; border-radius: 0.75rem; padding: 1.5rem;">
-                                        <div style="color: #10b981; font-weight: 600; font-size: 0.875rem; margin-bottom: 0.25rem;">Years Experience</div>
-                                        <div class="stat-counter" data-target="3" data-suffix="+" style="font-size: 2rem; font-weight: 700; color: white; margin-bottom: 0.25rem;">0+</div>
-                                        <div style="color: #71717a; font-size: 0.75rem;">Building at scale</div>
+                                        <div style="color: #10b981; font-weight: 600; font-size: 0.875rem; margin-bottom: 0.25rem;">Technologies Learned</div>
+                                        <div class="stat-counter" data-target="15" data-suffix="+" style="font-size: 2rem; font-weight: 700; color: white; margin-bottom: 0.25rem;">0+</div>
+                                        <div style="color: #71717a; font-size: 0.75rem;">Frameworks & Tools</div>
+                                    </div>
+                                    <div style="background: #18181b; border-radius: 0.75rem; padding: 1.5rem;">
+                                        <div style="color: #10b981; font-weight: 600; font-size: 0.875rem; margin-bottom: 0.25rem;">Problems Solved</div>
+                                        <div class="stat-counter" data-target="500" data-suffix="+" style="font-size: 2rem; font-weight: 700; color: white; margin-bottom: 0.25rem;">0+</div>
+                                        <div style="color: #71717a; font-size: 0.75rem;">DSA & Logic Building</div>
                                     </div>
                                 </div>
-                                <div style="background: #18181b; border-radius: 0.75rem; padding: 1.5rem;">
-                                    <div style="color: #10b981; font-weight: 600; font-size: 0.875rem; margin-bottom: 1rem;">Specializations</div>
+                                
+                                <div style="background: #18181b; border-radius: 0.75rem; padding: 1.5rem; margin-bottom: 1rem;">
+                                    <div style="color: #10b981; font-weight: 600; font-size: 0.875rem; margin-bottom: 1rem;">Notable Achievements</div>
                                     <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                                        <span style="background: rgba(16, 185, 129, 0.1); color: #10b981; padding: 0.35rem 1rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 500;">AI/ML Applications</span>
-                                        <span style="background: rgba(16, 185, 129, 0.1); color: #10b981; padding: 0.35rem 1rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 500;">Full-Stack Development</span>
-                                        <span style="background: rgba(16, 185, 129, 0.1); color: #10b981; padding: 0.35rem 1rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 500;">Problem Solving</span>
+                                        <span style="background: rgba(16, 185, 129, 0.1); color: #10b981; padding: 0.35rem 1rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 500;">🏏 District Level Cricket Player</span>
+                                        <span style="background: rgba(16, 185, 129, 0.1); color: #10b981; padding: 0.35rem 1rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 500;">💻 Open Source Contributor</span>
+                                        <span style="background: rgba(16, 185, 129, 0.1); color: #10b981; padding: 0.35rem 1rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 500;">🎯 GSoC Aspirant</span>
+                                        <span style="background: rgba(16, 185, 129, 0.1); color: #10b981; padding: 0.35rem 1rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 500;">🤖 AI & ML Enthusiast</span>
+                                        <span style="background: rgba(16, 185, 129, 0.1); color: #10b981; padding: 0.35rem 1rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 500;">🚀 Building Real Projects</span>
                                     </div>
+                                </div>
+
+                                <div style="background: #18181b; border-radius: 0.75rem; padding: 1.5rem; text-align: center;">
+                                    <div style="color: #10b981; font-weight: 600; font-size: 0.875rem; margin-bottom: 1rem;">GitHub Activity</div>
+                                    <img src="https://github-readme-stats.vercel.app/api?username=PrashamJain1318&show_icons=true&theme=radical&hide_border=true&bg_color=18181b" alt="GitHub Stats" style="max-width: 100%; border-radius: 8px;">
                                 </div>
                             </div>
                         </div>

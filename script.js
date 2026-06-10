@@ -121,17 +121,39 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Handle initial load with hash
-    if (window.location.hash) {
-        const targetId = window.location.hash.substring(1);
-        if (document.getElementById(targetId)) {
-            navigateToSection(targetId);
+
+
+    // === Page Loader ===
+    const pageLoader = document.getElementById('page-loader');
+    
+    function removeLoaderAndInit(targetId) {
+        if (pageLoader) {
+            // Add a small delay for the fake premium loading feel
+            setTimeout(() => {
+                pageLoader.style.opacity = '0';
+                pageLoader.style.visibility = 'hidden';
+                
+                // Wait for fade transition before starting GSAP
+                setTimeout(() => {
+                    if (targetId !== 'home' && document.getElementById(targetId)) {
+                        navigateToSection(targetId);
+                    } else {
+                        initAnimationsForSection('home');
+                    }
+                }, 600);
+            }, 1200);
         } else {
-            initAnimationsForSection('home');
+            if (targetId !== 'home' && document.getElementById(targetId)) {
+                navigateToSection(targetId);
+            } else {
+                initAnimationsForSection('home');
+            }
         }
-    } else {
-        initAnimationsForSection('home');
     }
+
+    // Handle initial routing with Loader
+    const initialHash = window.location.hash ? window.location.hash.substring(1) : 'home';
+    removeLoaderAndInit(initialHash);
 
     // === Contact Form Logic ===
     const contactForm = document.getElementById('contactForm');
@@ -238,7 +260,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // === Project Card 3D Tilt Logic ===
-    if (projectCards.length > 0) {
+    const projectCards = document.querySelectorAll('.project-card');
+    const projectCursor = document.querySelector('.project-cursor');
+    
+    if (projectCards && projectCards.length > 0) {
         projectCards.forEach(card => {
             card.addEventListener('mousemove', (e) => {
                 const rect = card.getBoundingClientRect();
@@ -401,11 +426,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 const typewriter = document.getElementById('typewriter');
                 if (typewriter) {
                     typewriter.innerText = "";
-                    gsap.to(typewriter, {
-                        text: "full-stack AI Builder",
-                        duration: 1.5,
-                        delay: 0.8,
-                        ease: "none"
+                    const roles = ["B.Tech CSE (AI & ML) Student", "Open Source Contributor", "GSoC Aspirant", "Future Startup Founder"];
+                    let tl = gsap.timeline({ repeat: -1 });
+                    
+                    roles.forEach(role => {
+                        tl.to(typewriter, { text: role, duration: 1.2, ease: "none", delay: 0.5 })
+                          .to(typewriter, { text: "", duration: 0.8, ease: "none", delay: 2 });
                     });
                 }
             }

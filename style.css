@@ -57,6 +57,62 @@ ul {
     min-height: 100vh;
 }
 
+/* ===== PAGE LOADER ===== */
+.page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #09090b;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.8s ease-out, visibility 0.8s ease-out;
+}
+
+.loader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.loader-hexagon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #3b82f6, #10b981);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    animation: hexSpin 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+}
+
+.loader-text {
+    font-family: monospace;
+    font-size: 1rem;
+    color: var(--zinc-400);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.loader-text span {
+    animation: dotPulse 1.5s infinite;
+    opacity: 0;
+}
+.loader-text .dot-2 { animation-delay: 0.5s; }
+.loader-text .dot-3 { animation-delay: 1s; }
+
+@keyframes hexSpin {
+    0% { transform: rotate(0deg) scale(0.8); }
+    50% { transform: rotate(180deg) scale(1.1); }
+    100% { transform: rotate(360deg) scale(0.8); }
+}
+
+@keyframes dotPulse {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
 /* ===== GLOBAL EFFECTS ===== */
 .cursor-glow {
     position: fixed;
@@ -356,8 +412,16 @@ ul {
 .gradient-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.4), transparent, rgba(0,0,0,0.6));
+    background: linear-gradient(45deg, rgba(59, 130, 246, 0.1), rgba(16, 185, 129, 0.1), rgba(168, 85, 247, 0.1));
+    background-size: 300% 300%;
+    animation: gradientShift 15s ease infinite;
     z-index: -5;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* ===== CONTENT WRAPPER ===== */
@@ -1479,4 +1543,9 @@ ul {
 }
 .text-filled {
     fill: transparent;
+}
+
+@keyframes floatImage {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
 }
