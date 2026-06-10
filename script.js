@@ -297,7 +297,7 @@ document.addEventListener('DOMContentLoaded', () => {
             card.addEventListener('mouseenter', () => {
                 const projectName = card.getAttribute('data-project');
                 if (projectName && projectCursor) {
-                    projectCursor.innerHTML = '<i class="fas fa-eye"></i> ' + projectName;
+                    projectCursor.innerHTML = '<img src="https://port-folio-mu-five-64.vercel.app/Hexagon.png" alt="logo" class="cursor-icon"> ' + projectName;
                     projectCursor.classList.add('active');
                 }
             });
