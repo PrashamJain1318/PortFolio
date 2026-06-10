@@ -436,15 +436,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     const statusClass = sub.statusDisplay === 'Accepted' ? 'lc-status-ac' : 'lc-status-wa';
                     const date = new Date(parseInt(sub.timestamp) * 1000).toLocaleDateString(undefined, {month: 'short', day: 'numeric'});
                     recentContainer.innerHTML += `
-                        <div class="lc-recent-item">
-                            <div>
-                                <a href="https://leetcode.com/problems/${sub.titleSlug}" target="_blank" class="lc-recent-title">${sub.title}</a>
-                                <div class="lc-recent-meta">
+                        <div class="lc-recent-item" style="gap: 1rem;">
+                            <div style="flex: 1; min-width: 0;">
+                                <a href="https://leetcode.com/problems/${sub.titleSlug}" target="_blank" class="lc-recent-title" style="display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${sub.title}</a>
+                                <div class="lc-recent-meta" style="margin-top: 0.25rem;">
                                     <span>${date}</span>
                                     <span class="lc-recent-lang">${sub.lang}</span>
                                 </div>
                             </div>
-                            <div class="lc-recent-status ${statusClass}">${sub.statusDisplay}</div>
+                            <div class="lc-recent-status ${statusClass}" style="flex-shrink: 0; white-space: nowrap;">${sub.statusDisplay}</div>
                         </div>
                     `;
                 });

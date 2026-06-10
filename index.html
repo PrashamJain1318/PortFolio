@@ -401,12 +401,12 @@
                     </div>
 
                     <!-- Dedicated LeetCode Dashboard Section -->
-                    <div id="leetcode-dashboard" style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.05);">
+                    <div id="leetcode-dashboard" style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.05); width: 100%; max-width: 100%; box-sizing: border-box; overflow: hidden;">
                         <div class="exp-header" style="margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem;">
-                            <div class="exp-icon" style="color: #f59e0b; border: none; background: rgba(245, 158, 11, 0.1); width: 3rem; height: 3rem; display: flex; justify-content: center; align-items: center; border-radius: 50%;"><i class="fas fa-code"></i></div>
-                            <div>
-                                <h3 class="exp-title" style="font-size: 1.5rem; margin: 0; color: #fff;">LeetCode Activity</h3>
-                                <h4 class="exp-subtitle" style="margin: 0; color: #71717a;">Problem solving and competitive programming</h4>
+                            <div class="exp-icon" style="color: #f59e0b; border: none; background: rgba(245, 158, 11, 0.1); width: 3rem; height: 3rem; display: flex; justify-content: center; align-items: center; border-radius: 50%; flex-shrink: 0;"><i class="fas fa-code"></i></div>
+                            <div style="min-width: 0;">
+                                <h3 class="exp-title" style="font-size: 1.5rem; margin: 0; color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">LeetCode Activity</h3>
+                                <h4 class="exp-subtitle" style="margin: 0; color: #71717a; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Problem solving and competitive programming</h4>
                             </div>
                         </div>
 
@@ -423,7 +423,7 @@
                         </div>
 
                         <!-- Dashboard Content -->
-                        <div id="lc-content" style="display: none;">
+                        <div id="lc-content" style="display: none; width: 100%; max-width: 100%;">
                             <!-- Stats Grid -->
                             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
                                 <div class="lc-stat-card">
