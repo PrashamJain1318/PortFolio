@@ -835,17 +835,19 @@ function initAnimationsForSection(sectionId) {
                 if (typewriter) {
                     typewriter.innerText = "";
                     const roles = [
-                        "🚀 Open Source Contributor",
-                        "💻 Full-Stack Developer",
-                        "🤖 AI & ML Enthusiast",
-                        "🎯 GSoC Aspirant",
-                        "🌱 Future Startup Founder"
+                        "Open Source Contributor",
+                        "Full-Stack Developer",
+                        "AI & ML Enthusiast",
+                        "GSoC Aspirant",
+                        "Future Startup Founder",
+                        "Problem Solver",
+                        "Tech Explorer"
                     ];
                     let tl = gsap.timeline({ repeat: -1 });
                     
                     roles.forEach(role => {
-                        tl.to(typewriter, { text: role, duration: 1.5, ease: "none", delay: 0.5 })
-                          .to(typewriter, { text: "", duration: 1, ease: "none", delay: 2 });
+                        tl.to(typewriter, { text: role, duration: 1.5, ease: "none", delay: 0.2 })
+                          .to(typewriter, { text: "", duration: 0.8, ease: "none", delay: 2 });
                     });
                 }
             }
