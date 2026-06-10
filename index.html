@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prasham Jain | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-zinc-950 text-zinc-100">
+
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="app-container">
+        
+        <!-- Mobile Header -->
+        <div class="mobile-header">
+            <div class="mobile-header-content">
+                <div class="user-info">
+                    <div class="avatar" style="overflow: hidden; padding: 0; background: transparent;">
+                        <img src="https://port-folio-mu-five-64.vercel.app/Hexagon.png" alt="Prasham Jain" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="user-text">
+                        <div class="user-name">Prasham Jain</div>
+                        <div class="user-status"><span class="blink">|</span></div>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn" id="openMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Desktop Sidebar / Mobile Drawer -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="user-info">
+                    <div class="avatar" style="overflow: hidden; padding: 0; background: transparent;">
+                        <img src="https://port-folio-mu-five-64.vercel.app/Hexagon.png" alt="Prasham Jain" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="user-text">
+                        <div class="user-name">Prasham Jain</div>
+                        <div class="user-status"><span class="blink">|</span></div>
+                    </div>
+                </div>
+                <button class="close-menu-btn" id="closeMenuBtn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#home" class="nav-item active"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                    <li><a href="#projects" class="nav-item"><i class="fas fa-briefcase"></i> <span>Projects</span></a></li>
+                    <li><a href="#experience" class="nav-item"><i class="fas fa-chart-line"></i> <span>Experience</span></a></li>
+                    <li><a href="#tools" class="nav-item"><i class="fas fa-tools"></i> <span>Tools</span></a></li>
+                    <li><a href="#about" class="nav-item"><i class="fas fa-user"></i> <span>About</span></a></li>
+                    <li><a href="#contact" class="nav-item"><i class="fas fa-envelope"></i> <span>Contact</span></a></li>
+                </ul>
+                
+                <div class="connect-section">
+                    <div class="connect-title">Connect</div>
+                    <ul class="social-links">
+                        <li><a href="https://x.com/Prasham_jain131" target="_blank" class="social-item"><i class="fab fa-twitter"></i> <span>X (Twitter)</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/prasham-jain-/" target="_blank" class="social-item"><i class="fab fa-linkedin-in"></i> <span>LinkedIn</span></a></li>
+                        <li><a href="https://medium.com/@prashamjaint" target="_blank" class="social-item"><i class="fab fa-medium"></i> <span>Medium</span></a></li>
+                        <li><a href="https://github.com/PrashamJain1318" target="_blank" class="social-item"><i class="fab fa-github"></i> <span>Github</span></a></li>
+                        <li><a href="https://leetcode.com/u/Prasham_Jain1318/" target="_blank" class="social-item"><i class="fas fa-code"></i> <span>LeetCode</span></a></li>
+                        <li><a href="https://codeforces.com/profile/Prasham_Jain" target="_blank" class="social-item"><i class="fas fa-chart-bar"></i> <span>Codeforces</span></a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                Made by Prasham | &copy; 2026
+            </div>
+        </aside>
+
+        <!-- Overlay for mobile drawer -->
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div class="background-effects">
+                <div class="grid-pattern"></div>
+                <div class="spotlight animate-spotlight"></div>
+                <div class="gradient-overlay"></div>
+            </div>
+
+            <div class="content-wrapper">
+                
+                <!-- SECTION: HOME -->
+                <section id="home" class="page-section active">
+                    <h1 class="hero-title">
+                        Hey, I'm <span class="highlight-name">Prasham</span>
+                    </h1>
+                    
+                    <h2 class="hero-subtitle">
+                        AIML Engineering 
+                        <span class="highlight-box">
+                            <span class="highlight-text">student</span>
+                            <span class="corner top-left"></span>
+                            <span class="corner top-right"></span>
+                            <span class="corner bottom-left"></span>
+                            <span class="corner bottom-right"></span>
+                        </span>
+                    </h2>
+                    
+                    <div class="connect-banner">
+                        <div class="banner-content">
+                            <i class="fas fa-arrow-right banner-icon" style="transform: rotate(-45deg);"></i>
+                            <span>Connect with me on LinkedIn</span>
+                        </div>
+                        <a href="https://linkedin.com/in/prasham-jain-/" target="_blank" class="follow-btn">Connect</a>
+                    </div>
+                    
+                    <p class="hero-description">
+                        I turn fuzzy ideas into live Products (<em>quickly</em>) &mdash; <span id="typewriter">full-stack AI Builder</span>. Currently working as a Founding Engineer at <a href="#" style="color: white; text-decoration: underline; text-underline-offset: 4px;">Invoice-AI</a>. I have built multiple products in past 5 years; raised $100K funding for my startup <a href="#" style="color: white; text-decoration: underline; text-underline-offset: 4px;">hexagondigitalservices.com</a>.
+                    </p>
+
+                    <article class="featured-work">
+                        <div class="video-container">
+                            <video class="featured-video" autoplay muted loop playsinline>
+                                <source src="https://port-folio-mu-five-64.vercel.app/homevideo.webm" type="video/webm">
+                                Your browser does not support HTML video.
+                            </video>
+                        </div>
+                        <div class="featured-info">
+                            <div class="featured-tag"><i class="fas fa-check-circle"></i> FEATURED WORK</div>
+                            <h3 class="featured-title">My 2025: shipping, signal, and a few uncomfortable rules</h3>
+                            <p class="featured-desc">A candid review of 2025 into 2026. The video above showcases some of the key projects and moments from my journey.</p>
+                            <a href="#projects" class="see-projects">See My Projects &rarr;</a>
+                        </div>
+                    </article>
+                </section>
+
+                <!-- SECTION: PROJECTS -->
+                <!-- SECTION: PROJECTS -->
+                <section id="projects" class="page-section">
+                    <h1 class="page-title">Projects</h1>
+                    <p class="page-description">Playground - Small MVP to Production Apps</p>
+                    
+                    <div class="projects-grid">
+                        
+                        <!-- Project 1 -->
+                        <div class="project-card" data-project="AI Invoice Generator">
+                            <div class="project-image" style="background-image: url('https://port-folio-mu-five-64.vercel.app/invoice.jpg'); background-size: cover; background-position: center;">
+                                <span class="status-badge">active</span>
+                            </div>
+                            <div class="project-content">
+                                <h3>AI Invoice Generator</h3>
+                                <p>AI-powered SaaS for generating professional invoices with Gemini integration.</p>
+                                <div class="tech-stack"><span>AI</span><span>SaaS</span><span>MERN</span><span>Full-Stack</span><span>Business</span></div>
+                                <div class="project-actions">
+                                    <a href="https://invoicegenerator-frontend-tdng.onrender.com/" target="_blank" class="btn btn-visit">Visit</a>
+                                    <a href="https://github.com/PrashamJain1318" target="_blank" class="btn btn-github">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 2 -->
+                        <div class="project-card" data-project="LMS Platform">
+                            <div class="project-image" style="background-image: url('https://port-folio-mu-five-64.vercel.app/lms.jpg'); background-size: cover; background-position: center;">
+                                <span class="status-badge">active</span>
+                            </div>
+                            <div class="project-content">
+                                <h3>LMS Platform</h3>
+                                <p>Complete Learning Management System with course management and user dashboards.</p>
+                                <div class="tech-stack"><span>Education</span><span>MERN</span><span>Full-Stack</span><span>E-learning</span></div>
+                                <div class="project-actions">
+                                    <a href="https://l-m-s-web-frontend.onrender.com/" target="_blank" class="btn btn-visit">Visit</a>
+                                    <a href="https://github.com/PrashamJain1318" target="_blank" class="btn btn-github">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 3 -->
+                        <div class="project-card" data-project="Resume Builder">
+                            <div class="project-image" style="background-image: url('https://port-folio-mu-five-64.vercel.app/resume.jpg'); background-size: cover; background-position: center;">
+                                <span class="status-badge">active</span>
+                            </div>
+                            <div class="project-content">
+                                <h3>Resume Builder</h3>
+                                <p>AI-powered resume creation platform with professional templates.</p>
+                                <div class="tech-stack"><span>AI</span><span>SaaS</span><span>MERN</span><span>Productivity</span></div>
+                                <div class="project-actions">
+                                    <a href="https://resumexpert-frontend.onrender.com/" target="_blank" class="btn btn-visit">Visit</a>
+                                    <a href="https://github.com/PrashamJain1318" target="_blank" class="btn btn-github">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 4 -->
+                        <div class="project-card" data-project="Frenzy Food">
+                            <div class="project-image" style="background-image: url('https://port-folio-mu-five-64.vercel.app/food.jpg'); background-size: cover; background-position: center;">
+                                <span class="status-badge">active</span>
+                            </div>
+                            <div class="project-content">
+                                <h3>Frenzy Food</h3>
+                                <p>A modern food delivery application interface with smooth animations and responsive layout.</p>
+                                <div class="tech-stack"><span>Food</span><span>Delivery</span><span>MERN</span></div>
+                                <div class="project-actions">
+                                    <a href="https://frenzyfood-frontend.onrender.com/" target="_blank" class="btn btn-visit">Visit</a>
+                                    <a href="https://github.com/PrashamJain1318" target="_blank" class="btn btn-github">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 5 -->
+                        <div class="project-card" data-project="Movie Ticket Booking">
+                            <div class="project-image" style="background-image: url('https://port-folio-mu-five-64.vercel.app/movie.jpg'); background-size: cover; background-position: center;">
+                                <span class="status-badge">active</span>
+                            </div>
+                            <div class="project-content">
+                                <h3>Movie Ticket Booking</h3>
+                                <p>A fullstack movie ticket booking platform complete with an admin panel.</p>
+                                <div class="tech-stack"><span>MERN</span><span>Full-Stack</span><span>Booking</span></div>
+                                <div class="project-actions">
+                                    <a href="https://moviebooking-frontend-rrwx.onrender.com/" target="_blank" class="btn btn-visit">Visit</a>
+                                    <a href="https://github.com/PrashamJain1318" target="_blank" class="btn btn-github">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </section>
+
+                <!-- SECTION: EXPERIENCE -->
+                <section id="experience" class="page-section">
+                    
+                    <div class="changelog-header">
+                        <div class="changelog-badge">Career Timeline</div>
+                        <h1 class="changelog-title">Changelog from my journey</h1>
+                        <p class="changelog-subtitle">I've been working at Kay.ai for the past 1.5 years.<br>Here's a timeline of my journey across multiple startups and projects.</p>
+                        
+                        <div class="changelog-legend">
+                            <span class="legend-item"><span class="legend-dot" style="background: #3b82f6;"></span> Current Role</span>
+                            <span class="legend-item"><span class="legend-dot" style="background: #a855f7;"></span> AI Startup</span>
+                            <span class="legend-item"><span class="legend-dot" style="background: #22c55e;"></span> Growth Startup</span>
+                            <span class="legend-item"><span class="legend-dot" style="background: #f59e0b;"></span> Early Career</span>
+                        </div>
+                    </div>
+
+
+
+                    <h1 class="page-title" style="display: none;">Experience</h1> <!-- Hidden since design doesn't show huge title -->
+                    <div class="timeline-container">
+                        <!-- Item 1 -->
+                        <div class="timeline-item">
+                            <div class="timeline-left">
+                                <div class="timeline-dot"></div>
+                                <h2 class="timeline-date">2026 – Pres</h2>
+                            </div>
+                            <div class="timeline-right">
+                                <div class="exp-header">
+                                    <div class="exp-icon" style="color: #3b82f6;"><i class="fas fa-rocket"></i></div>
+                                    <div>
+                                        <h3 class="exp-title">Open Source Contributor &middot; Global</h3>
+                                        <h4 class="exp-subtitle">Building projects handling diverse challenges</h4>
+                                        <h4 class="exp-subtitle" style="font-size: 0.75rem; margin-top: 0.25rem;">Active Member &middot; Multiple Teams</h4>
+                                    </div>
+                                </div>
+                                <ul class="exp-bullets">
+                                    <li>Contributing to organizations such as Zulip and other open-source communities</li>
+                                    <li>Solving Data Structures & Algorithms problems daily</li>
+                                    <li>Building AI-powered web applications using modern technologies</li>
+                                    <li>Learning system design, backend engineering, and scalable software development</li>
+                                </ul>
+                                <div class="tech-stack">
+                                    <span>React</span><span>Node.js</span><span>MongoDB</span><span>AI/ML</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Item 2 -->
+                        <div class="timeline-item">
+                            <div class="timeline-left">
+                                <div class="timeline-dot"></div>
+                                <h2 class="timeline-date">2025 – 2026</h2>
+                            </div>
+                            <div class="timeline-right">
+                                <div class="exp-header">
+                                    <div class="exp-icon" style="color: #22c55e;"><i class="fas fa-code"></i></div>
+                                    <div>
+                                        <h3 class="exp-title">Hackathon Builder &middot; Full Stack</h3>
+                                        <h4 class="exp-subtitle">Developed platforms for innovation challenges</h4>
+                                        <h4 class="exp-subtitle" style="font-size: 0.75rem; margin-top: 0.25rem;">Project Lead &middot; 3 Team Members</h4>
+                                    </div>
+                                </div>
+                                <ul class="exp-bullets">
+                                    <li>Built full-stack web applications using the MERN stack</li>
+                                    <li>Participated in hackathons and startup-focused innovation challenges</li>
+                                    <li>Developed AI-powered solutions for social and business problems</li>
+                                    <li>Learned deployment, APIs, authentication, and database design</li>
+                                </ul>
+                                <div class="tech-stack">
+                                    <span>React</span><span>Express.js</span><span>MongoDB</span><span>Tailwind</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="timeline-item">
+                            <div class="timeline-left">
+                                <div class="timeline-dot"></div>
+                                <h2 class="timeline-date">2024 – 2025</h2>
+                            </div>
+                            <div class="timeline-right">
+                                <div class="exp-header">
+                                    <div class="exp-icon" style="color: #3b82f6;"><i class="fas fa-graduation-cap"></i></div>
+                                    <div>
+                                        <h3 class="exp-title">Competitive Exam Aspirant & Future Engineer</h3>
+                                        <h4 class="exp-subtitle">Balanced academics with technical learning.</h4>
+                                    </div>
+                                </div>
+                                <ul class="exp-bullets">
+                                    <li>Prepared for NEET and CUET while exploring programming</li>
+                                    <li>Developed strong analytical and problem-solving skills</li>
+                                    <li>Started learning Data Structures & Algorithms</li>
+                                    <li>Built foundational knowledge in Computer Science</li>
+                                </ul>
+                                <div class="tech-stack">
+                                    <span>Problem Solving</span><span>Mathematics</span><span>Logic Building</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 4 -->
+                        <div class="timeline-item">
+                            <div class="timeline-left">
+                                <div class="timeline-dot"></div>
+                                <h2 class="timeline-date">2023 – 2024</h2>
+                            </div>
+                            <div class="timeline-right">
+                                <div class="exp-header">
+                                    <div class="exp-icon" style="color: #f59e0b;"><i class="fas fa-seedling"></i></div>
+                                    <div>
+                                        <h3 class="exp-title">Beginner Programmer &middot; Fundamentals</h3>
+                                        <h4 class="exp-subtitle">Started the journey into software development</h4>
+                                        <h4 class="exp-subtitle" style="font-size: 0.75rem; margin-top: 0.25rem;">Early Stage &middot; Self-Taught</h4>
+                                    </div>
+                                </div>
+                                <ul class="exp-bullets">
+                                    <li>Learned programming fundamentals</li>
+                                    <li>Practiced coding challenges and algorithms</li>
+                                    <li>Explored web development and GitHub</li>
+                                    <li>Built first personal projects</li>
+                                </ul>
+                                <div class="tech-stack">
+                                    <span>C++</span><span>HTML/CSS</span><span>JavaScript</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Key Achievements Item -->
+                        <div class="timeline-item">
+                            <div class="timeline-left">
+                                <div class="timeline-dot" style="background: white; box-shadow: 0 0 0 4px #09090b, 0 0 0 6px white;"></div>
+                                <h2 class="timeline-date" style="font-family: inherit; font-size: 2.5rem; text-align: left; padding-right: 0; line-height: 1.1; margin-top: -0.2rem; color: #71717a;">Key<br><span style="color: var(--zinc-300);">Achievements</span></h2>
+                            </div>
+                            <div class="timeline-right">
+                                <div class="exp-header" style="margin-bottom: 1.5rem;">
+                                    <div class="exp-icon" style="color: #10b981; border: none; background: rgba(16, 185, 129, 0.1);"><i class="fas fa-award"></i></div>
+                                    <div>
+                                        <h3 class="exp-title" style="font-size: 1.25rem;">Milestones & Recognition</h3>
+                                        <h4 class="exp-subtitle">Significant achievements across journey</h4>
+                                    </div>
+                                </div>
+                                
+                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                                    <div style="background: #18181b; border-radius: 0.75rem; padding: 1.5rem;">
+                                        <div style="color: #10b981; font-weight: 600; font-size: 0.875rem; margin-bottom: 0.25rem;">Projects Built</div>
+                                        <div class="stat-counter" data-target="15" data-suffix="+" style="font-size: 2rem; font-weight: 700; color: white; margin-bottom: 0.25rem;">0+</div>
+                                        <div style="color: #71717a; font-size: 0.75rem;">Across all platforms</div>
+                                    </div>
+                                    <div style="background: #18181b; border-radius: 0.75rem; padding: 1.5rem;">
+                                        <div style="color: #10b981; font-weight: 600; font-size: 0.875rem; margin-bottom: 0.25rem;">Hackathons</div>
+                                        <div class="stat-counter" data-target="5" data-suffix="+" style="font-size: 2rem; font-weight: 700; color: white; margin-bottom: 0.25rem;">0+</div>
+                                        <div style="color: #71717a; font-size: 0.75rem;">Competitions & Wins</div>
+                                    </div>
+                                    <div style="background: #18181b; border-radius: 0.75rem; padding: 1.5rem;">
+                                        <div style="color: #10b981; font-weight: 600; font-size: 0.875rem; margin-bottom: 0.25rem;">Open Source</div>
+                                        <div class="stat-counter" data-target="20" data-suffix="+" style="font-size: 2rem; font-weight: 700; color: white; margin-bottom: 0.25rem;">0+</div>
+                                        <div style="color: #71717a; font-size: 0.75rem;">Contributions Merged</div>
+                                    </div>
+                                    <div style="background: #18181b; border-radius: 0.75rem; padding: 1.5rem;">
+                                        <div style="color: #10b981; font-weight: 600; font-size: 0.875rem; margin-bottom: 0.25rem;">Years Experience</div>
+                                        <div class="stat-counter" data-target="3" data-suffix="+" style="font-size: 2rem; font-weight: 700; color: white; margin-bottom: 0.25rem;">0+</div>
+                                        <div style="color: #71717a; font-size: 0.75rem;">Building at scale</div>
+                                    </div>
+                                </div>
+                                <div style="background: #18181b; border-radius: 0.75rem; padding: 1.5rem;">
+                                    <div style="color: #10b981; font-weight: 600; font-size: 0.875rem; margin-bottom: 1rem;">Specializations</div>
+                                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                                        <span style="background: rgba(16, 185, 129, 0.1); color: #10b981; padding: 0.35rem 1rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 500;">AI/ML Applications</span>
+                                        <span style="background: rgba(16, 185, 129, 0.1); color: #10b981; padding: 0.35rem 1rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 500;">Full-Stack Development</span>
+                                        <span style="background: rgba(16, 185, 129, 0.1); color: #10b981; padding: 0.35rem 1rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 500;">Problem Solving</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technologies & Skills -->
+                    <div class="skills-container">
+                        <div class="skills-header">
+                            <div class="skills-header-icon">&lt;/&gt;</div>
+                            <div class="skills-header-text">
+                                <h3>Technologies & Skills</h3>
+                                <p>Full-stack expertise across modern tech stack</p>
+                            </div>
+                        </div>
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <h4 class="skill-frontend" style="color: #60a5fa;">Frontend</h4>
+                                <p>React,<br>TypeScript,<br>Tailwind,<br>Next.js</p>
+                            </div>
+                            <div class="skill-card">
+                                <h4 class="skill-backend" style="color: #34d399;">Backend</h4>
+                                <p>Node.js, GoLang,<br>Rails, Python</p>
+                            </div>
+                            <div class="skill-card">
+                                <h4 class="skill-ai" style="color: #c084fc;">AI/ML</h4>
+                                <p>OpenAI,<br>LangChain,<br>Vector DBs</p>
+                            </div>
+                            <div class="skill-card">
+                                <h4 class="skill-db" style="color: #fbbf24;">Databases</h4>
+                                <p>PostgreSQL,<br>Redis, MongoDB,<br>TimescaleDB</p>
+                            </div>
+                            <div class="skill-card">
+                                <h4 class="skill-cloud" style="color: #f43f5e;">Cloud & DevOps</h4>
+                                <p>AWS, Cloudflare,<br>Docker, CI/CD</p>
+                            </div>
+                            <div class="skill-card">
+                                <h4 class="skill-tools" style="color: #22d3ee;">Tools</h4>
+                                <p>Git, Figma,<br>Vercel,<br>Agile/Scrum</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECTION: TOOLS -->
+                <section id="tools" class="page-section">
+                    <h1 class="page-title">Shovels</h1>
+                    <p class="page-description">Tools I frequently use to make life easier</p>
+                    
+                    <div class="shovels-grid">
+                        <div class="shovel-card">
+                            <div class="shovel-icon"><i class="fas fa-cube"></i></div>
+                            <div class="shovel-info">
+                                <h3>Cursor</h3>
+                                <p>IDE</p>
+                            </div>
+                            <div class="shovel-glow"></div>
+                        </div>
+                        <div class="shovel-card">
+                            <div class="shovel-icon"><i class="fas fa-brain"></i></div>
+                            <div class="shovel-info">
+                                <h3>ChatGPT</h3>
+                                <p>Productivity</p>
+                            </div>
+                            <div class="shovel-glow"></div>
+                        </div>
+                        <div class="shovel-card">
+                            <div class="shovel-icon"><i class="fas fa-book"></i></div>
+                            <div class="shovel-info">
+                                <h3>Notion</h3>
+                                <p>Productivity</p>
+                            </div>
+                            <div class="shovel-glow"></div>
+                        </div>
+                        <div class="shovel-card">
+                            <div class="shovel-icon" style="color: #3b82f6;"><i class="fab fa-python"></i></div>
+                            <div class="shovel-info">
+                                <h3>PyCharm</h3>
+                                <p>IDE</p>
+                            </div>
+                            <div class="shovel-glow"></div>
+                        </div>
+                        <div class="shovel-card">
+                            <div class="shovel-icon" style="color: #3b82f6;"><i class="fas fa-code"></i></div>
+                            <div class="shovel-info">
+                                <h3>VS Code</h3>
+                                <p>IDE</p>
+                            </div>
+                            <div class="shovel-glow"></div>
+                        </div>
+                        <div class="shovel-card">
+                            <div class="shovel-icon" style="color: #eab308;"><i class="fab fa-slack"></i></div>
+                            <div class="shovel-info">
+                                <h3>Slack</h3>
+                                <p>Communication</p>
+                            </div>
+                            <div class="shovel-glow"></div>
+                        </div>
+                        <div class="shovel-card">
+                            <div class="shovel-icon"><i class="fab fa-medium"></i></div>
+                            <div class="shovel-info">
+                                <h3>Medium</h3>
+                                <p>Writing</p>
+                            </div>
+                            <div class="shovel-glow"></div>
+                        </div>
+                        <div class="shovel-card">
+                            <div class="shovel-icon" style="color: #3ddc84;"><i class="fab fa-android"></i></div>
+                            <div class="shovel-info">
+                                <h3>Android Studio</h3>
+                                <p>IDE</p>
+                            </div>
+                            <div class="shovel-glow"></div>
+                        </div>
+                        <div class="shovel-card">
+                            <div class="shovel-icon" style="color: #f97316;"><i class="fas fa-brain"></i></div>
+                            <div class="shovel-info">
+                                <h3>Claude AI</h3>
+                                <p>Productivity</p>
+                            </div>
+                            <div class="shovel-glow"></div>
+                        </div>
+                        <div class="shovel-card">
+                            <div class="shovel-icon" style="color: #eab308;"><i class="far fa-smile-beam"></i></div>
+                            <div class="shovel-info">
+                                <h3>Hugging Face</h3>
+                                <p>AI Platform</p>
+                            </div>
+                            <div class="shovel-glow"></div>
+                        </div>
+                        <div class="shovel-card">
+                            <div class="shovel-icon" style="color: #3b82f6;"><i class="fas fa-gem"></i></div>
+                            <div class="shovel-info">
+                                <h3>Gemini</h3>
+                                <p>Productivity</p>
+                            </div>
+                            <div class="shovel-glow"></div>
+                        </div>
+                        <div class="shovel-card">
+                            <div class="shovel-icon" style="color: #ec4899;"><i class="fas fa-heart"></i></div>
+                            <div class="shovel-info">
+                                <h3>Lovable</h3>
+                                <p>Productivity</p>
+                            </div>
+                            <div class="shovel-glow"></div>
+                        </div>
+                        <div class="shovel-card">
+                            <div class="shovel-icon"><i class="fas fa-water"></i></div>
+                            <div class="shovel-info">
+                                <h3>Windsurf</h3>
+                                <p>IDE</p>
+                            </div>
+                            <div class="shovel-glow"></div>
+                        </div>
+                        <div class="shovel-card">
+                            <div class="shovel-icon"><i class="fas fa-search"></i></div>
+                            <div class="shovel-info">
+                                <h3>Perplexity</h3>
+                                <p>Research</p>
+                            </div>
+                            <div class="shovel-glow"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECTION: ABOUT -->
+                <section id="about" class="page-section">
+                    <h1 class="page-title">Prasham Jain</h1>
+                    <div class="about-tags">
+                        <span>FULL-STACK DEV</span> &bull; <span>AI ENGINEER</span> &bull; <span>LLMS</span> &bull; <span>TRAVEL</span> &bull; <span>MUSIC</span> &bull; <span>F1</span> &bull; <span>READING</span>
+                    </div>
+                    <div class="tech-badges">
+                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">LLM</span>
+                        <span class="tech-badge">Rails</span>
+                        <span class="tech-badge">Next.js</span>
+                        <span class="tech-badge">TypeScript</span>
+                        <span class="tech-badge">Postgres</span>
+                        <span class="tech-badge">Redis</span>
+                    </div>
+                    
+                    <div class="about-content">
+                        <h3>Who I Am</h3>
+                        <p>Hello! I'm <strong>Prasham Jain</strong>, an aspiring software engineer and entrepreneur from India, passionate about building innovative technology that solves real-world problems. I am currently pursuing my journey in Computer Science with a strong focus on Artificial Intelligence, Machine Learning, and software development.</p>
+                        
+                        <h3>What I Do</h3>
+                        <p>I spend my time learning Data Structures & Algorithms, exploring AI technologies, contributing to open-source projects, and building practical software solutions. I enjoy transforming ideas into products and continuously improving my problem-solving and development skills.</p>
+                        
+                        <h3>My Journey</h3>
+                        <p>My technology journey began with curiosity about how software powers the world around us. Since then, I've been actively learning programming, participating in hackathons, exploring startup ideas, and preparing for opportunities like Google Summer of Code (GSoC). Alongside coding, I've worked on projects focused on solving meaningful societal challenges through technology.</p>
+                        
+                        <h3>Vision</h3>
+                        <h4>Future Startup Founder & AI Engineer</h4>
+                        <ul style="margin-bottom: 1.5rem; color: var(--zinc-300);">
+                            <li>Goal: Become a top software engineer and entrepreneur</li>
+                            <li>Contribute to Google Summer of Code (GSoC)</li>
+                            <li>Build impactful AI products used by millions</li>
+                            <li>Launch technology startups solving real-world problems</li>
+                        </ul>
+                        
+                        <h3>Key Achievements</h3>
+                        <p>🚀 <strong>Open Source Contributor</strong>: Contributing to real-world projects and collaborating with global developer communities.</p>
+                        <p>💻 <strong>Full Stack Developer</strong>: Built multiple web applications using the MERN stack and modern web technologies.</p>
+                        <p>🤖 <strong>AI Enthusiast</strong>: Exploring AI, LLMs, and building intelligent solutions for real-world problems.</p>
+                        <p>🏆 <strong>Hackathon Builder</strong>: Developed innovative solutions under tight deadlines and participated in technology competitions.</p>
+                        <p>📈 <strong>Problem Solver</strong>: Actively learning Data Structures & Algorithms and strengthening coding skills.</p>
+                        <p>💡 <strong>Aspiring Startup Founder</strong>: Passionate about building impactful products and technology-driven businesses.</p>
+                        <p>🏏 <strong>District-Level Cricket Player</strong>: Represented at district-level cricket competitions, demonstrating teamwork and discipline.</p>
+                        
+                        <div class="about-actions">
+                            <a href="#contact" class="primary-btn">Get in touch</a>
+                            <a href="https://mail.google.com/mail/u/0/?fs=1&to=prashamjaint@gmail.com&tf=cm" target="_blank" class="secondary-btn">E-Mail</a>
+                        </div>
+                        
+                        <!-- Technologies & Skills moved to Experience -->
+                    </div>
+                </section>
+
+                <!-- SECTION: CONTACT -->
+                <section id="contact" class="page-section">
+                    <div class="contact-header">
+                        <h1 class="page-title huge">Get in Touch</h1>
+                        <p class="page-description">Have a project in mind or just want to say hi? I'd love to hear from you.</p>
+                    </div>
+                    
+                    <div class="contact-methods">
+                        <a href="mailto:prashamjaint@gmail.com" class="contact-card">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-text">
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">prashamjaint@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="https://x.com/Prasham_jain131" target="_blank" class="contact-card">
+                            <div class="contact-icon"><i class="fab fa-twitter"></i></div>
+                            <div class="contact-text">
+                                <span class="contact-label">Twitter</span>
+                                <span class="contact-value">@Prasham_jain131</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </section>
+
+            </div>
+
+            <footer class="footer">
+                <div class="footer-content">
+                    <svg width="100%" height="200" viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg" class="giant-text-svg select-none">
+                        <defs>
+                            <radialGradient id="revealMask" gradientUnits="userSpaceOnUse" r="20%" cx="50%" cy="50%">
+                                <stop offset="0%" stop-color="white"></stop>
+                                <stop offset="100%" stop-color="black"></stop>
+                            </radialGradient>
+                            <mask id="textMask">
+                                <rect x="0" y="0" width="100%" height="100%" fill="url(#revealMask)"></rect>
+                            </mask>
+                            <linearGradient id="textGradient" gradientUnits="userSpaceOnUse" cx="50%" cy="50%" r="25%">
+                                <stop offset="0%" stop-color="#fff"></stop>
+                                <stop offset="100%" stop-color="#555"></stop>
+                            </linearGradient>
+                        </defs>
+                        <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" stroke-width="0.3" class="text-outline hidden-text">PRASHAM</text>
+                        <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" stroke-width="0.3" class="text-outline outline-text" stroke-dashoffset="1000" stroke-dasharray="1000">PRASHAM</text>
+                        <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" stroke="url(#textGradient)" stroke-width="0.3" mask="url(#textMask)" class="text-filled">PRASHAM</text>
+                    </svg>
+                    <div class="footer-links">
+                        <span>Reach out &rarr;</span>
+                        <span>Made by Prasham</span>
+                    </div>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <div id="projectCursor" class="project-cursor"></div>
+    
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>

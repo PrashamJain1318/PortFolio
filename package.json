@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "register-gsap": "node register-gsap.mjs"
+  },
+  "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "gsap": "^3.15.0"
+  }
+}
