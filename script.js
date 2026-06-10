@@ -799,7 +799,7 @@ function initAnimationsForSection(sectionId) {
 
         gsapCtx = gsap.context(() => {
             // General text reveal for headings and paragraphs
-            const textElements = section.querySelectorAll('.page-title, .page-description, .hero-title, .hero-subtitle, .hero-description, .about-content p, .about-content h3');
+            const textElements = section.querySelectorAll('.page-title, .page-description, .hero-title, .hero-subtitle, .hero-roles, .hero-description, .about-content p, .about-content h3');
             
             textElements.forEach(el => {
                 gsap.fromTo(el, 
@@ -834,12 +834,18 @@ function initAnimationsForSection(sectionId) {
                 const typewriter = document.getElementById('typewriter');
                 if (typewriter) {
                     typewriter.innerText = "";
-                    const roles = ["B.Tech CSE (AI & ML) Student", "Open Source Contributor", "GSoC Aspirant", "Future Startup Founder"];
+                    const roles = [
+                        "🚀 Open Source Contributor",
+                        "💻 Full-Stack Developer",
+                        "🤖 AI & ML Enthusiast",
+                        "🎯 GSoC Aspirant",
+                        "🌱 Future Startup Founder"
+                    ];
                     let tl = gsap.timeline({ repeat: -1 });
                     
                     roles.forEach(role => {
-                        tl.to(typewriter, { text: role, duration: 1.2, ease: "none", delay: 0.5 })
-                          .to(typewriter, { text: "", duration: 0.8, ease: "none", delay: 2 });
+                        tl.to(typewriter, { text: role, duration: 1.5, ease: "none", delay: 0.5 })
+                          .to(typewriter, { text: "", duration: 1, ease: "none", delay: 2 });
                     });
                 }
             }
