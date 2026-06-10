@@ -1433,6 +1433,33 @@ ul {
     pointer-events: all;
 }
 
+/* ===== SECTION CENTERING ===== */
+#tools, #about, #contact {
+    text-align: center;
+}
+
+#tools .page-description,
+#about .page-description,
+#contact .page-description,
+.shovels-grid,
+.contact-methods,
+.contact-form,
+.about-content p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-tags,
+.tech-badges,
+.about-actions {
+    justify-content: center;
+}
+
+.shovel-card,
+.contact-card {
+    text-align: left;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     .mobile-header {
