@@ -680,6 +680,7 @@ ul {
     color: var(--zinc-400);
     font-size: 1.125rem;
     margin-bottom: 2rem;
+    max-width: 800px;
 }
 
 /* Projects */
@@ -734,6 +735,7 @@ ul {
     flex-direction: column;
     flex: 1;
 }
+
 
 .project-content h3 {
     font-size: 1.25rem;
@@ -1209,6 +1211,7 @@ ul {
     margin-bottom: 1rem;
     font-size: 1rem;
     line-height: 1.6;
+    max-width: 800px;
 }
 
 .about-actions {
@@ -1314,6 +1317,7 @@ ul {
     border: 1px solid var(--zinc-800);
     border-radius: 0.75rem;
     padding: 2rem;
+    max-width: 800px;
 }
 
 .form-row {
@@ -1455,7 +1459,7 @@ ul {
     }
     
     .content-wrapper {
-        padding: 6rem 1.5rem 3rem 1.5rem;
+        padding: 6rem 8vw 3rem 8vw;
     }
     
     .footer-links {
