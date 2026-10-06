@@ -520,6 +520,18 @@ ul {
     margin-bottom: 1.5rem;
 }
 
+.hero-banners {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.hero-banners .connect-banner {
+    margin-bottom: 0;
+}
+
 .connect-banner {
     display: inline-flex;
     align-items: center;

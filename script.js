@@ -823,7 +823,7 @@ function initAnimationsForSection(sectionId) {
             if (sectionId === 'home') {
                 gsap.fromTo('.connect-banner', 
                     { scale: 0.9, opacity: 0 },
-                    { scale: 1, opacity: 1, duration: 0.6, ease: "back.out(1.7)", delay: 0.4 }
+                    { scale: 1, opacity: 1, duration: 0.6, ease: "back.out(1.7)", delay: 0.4, stagger: 0.15 }
                 );
                 gsap.fromTo('.featured-work', 
                     { y: 50, opacity: 0 },
