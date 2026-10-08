@@ -7,14 +7,15 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preload" as="image" href="loader.png">
 </head>
 <body class="bg-zinc-950 text-zinc-100">
 
     <!-- PAGE LOADER -->
-    <div id="page-loader" class="page-loader">
+    <div id="page-loader" class="page-loader" aria-label="Initializing Portfolio">
+        <div class="loader-backdrop-glow"></div>
         <div class="loader-content">
-            <div class="loader-hexagon"></div>
-            <div class="loader-text">Initializing<span class="dot-1">.</span><span class="dot-2">.</span><span class="dot-3">.</span></div>
+            <img src="loader.png" alt="Prasham - Portfolio Initializing..." class="loader-image" />
         </div>
     </div>
 

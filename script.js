@@ -128,10 +128,11 @@ document.addEventListener('DOMContentLoaded', () => {
     
     function removeLoaderAndInit(targetId) {
         if (pageLoader) {
-            // Add a small delay for the fake premium loading feel
+            // Display loading graphic during portfolio initialization
             setTimeout(() => {
                 pageLoader.style.opacity = '0';
                 pageLoader.style.visibility = 'hidden';
+                pageLoader.style.pointerEvents = 'none';
                 
                 // Wait for fade transition before starting GSAP
                 setTimeout(() => {
@@ -141,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         initAnimationsForSection('home');
                     }
                 }, 600);
-            }, 1200);
+            }, 1500);
         } else {
             if (targetId !== 'home' && document.getElementById(targetId)) {
                 navigateToSection(targetId);
